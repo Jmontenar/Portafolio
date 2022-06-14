@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css2? family= Montserrat:ital,wght@0,400;1,500;1,600 & display=swap');
+
+:root {
+    --principal-color: #ffffff;
+    --secundary-color: #f9f5f2;
+    --blue-primary: #8e7bef;
+    --blue-secundary: #5d3bef;
+    --white-gray: #f9f6ff;
+    --black-primary: #222222;
+    --gray: #423f40;
+    }
+    
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    background-color: var(--principal-color);
+    display:block;  
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+input#menu-hamburguesa{
+    visibility: hidden;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1.25rem;
+    height: 60px;
+}
+
+nav > div > img {
+    width: 45px;
+}
+
+input[type="checkbox" i]{
+    background-color: initial;
+    cursor: default;
+    appearance: auto;
+    border: initial
+}
+
+input#menu-hamburguesa ~ ul{
+    background-color: var(--principal-color);
+    list-style:none;
+    position:absolute;
+    width: 100%;
+    left: 0;
+    height: calc(100vh - 60px);
+    top: 60px;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem 1rem;
+    display: none;
+}
+
+ul{
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+input#menu-hamburguesa:checked ~ ul{
+    display: flex;
+}
+
+.presentation{
+    min-width: 100%;
+    padding: 2.5rem;
+    grid-column: 1/1;
+    grid-row: 1;   
+}
+
+.presentation>h1{
+    font-size: 2.5rem;
+    font-style: sem;
+}
+.presentation>p{
+    font-size: 18px;
+}
+
+.principal-image{
+    grid-row: 2/3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.principal-image>img{
+    width: 300px;
+    margin-left: 100px;
+    }
+
+
+.social-network{
+    position: relative;
+    display: flex;
+    top: 165px;
+    right: 165px;
+    gap: 1rem;
+
+}
+
+.social-icon{
+    width: 30px;
+    height: 30px;
+    background: var(--blue-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.boton-contact{
+    grid-row: 3/4;
+    width: 290px;
+    height: 45px;
+    background-color: var(--blue-secundary);
+    text-align: center;
+    display: inline-block;
+    margin: auto;
+    border: none;
+}
+
+.boton-contact>img{
+    width: 15px;
+}
+
+.boton-contact>small{
+    margin-left: 20px;
+    font-size: 15px;
+    color: var(--principal-color);
+}
+
+.social-network2{
+    display: none;
+}
+
+.section-about{
+    padding: 0.25rem;
+}
+
+.section>h2{
+    text-align: center;
+}
+
+.section>p{
+    padding: 10px 5px;
+}
+
+.skills-contenedor{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: space-between;
+    max-width: 100%;
+    overflow-x: scroll;
+}
+
+.skills.card{
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgb(31 38 135 / 37%);
+    backdrop-filter: blur( 3px );
+    border-radius: 5px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.skills.card>img{
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+    margin-bottom: 0.5rem;
+}
+
+h4 {
+    display: block;
+    margin-block-start: 1.33em;
+    margin-block-end: 1.33em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.section-experience>h2{
+    text-align: center;
+}
+
+h2 {
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+.vertical {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: space-between;
+    max-width: 100%;
+    overflow-x: scroll;
+}
+
+.experience-card {
+    width: 250px;
+    min-width: 250px;
+    padding: 1.5rem 1rem;
+    text-align: center;
+}
+
+.experience-card>img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+h5 {
+    display: block;
+    font-size: 0.83em;
+    margin-block-start: 1.67em;
+    margin-block-end: 1.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+h6 {
+    display: block;
+    font-size: 0.67em;
+    margin-block-start: 2.33em;
+    margin-block-end: 2.33em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+small {
+    font-size: smaller;
+}
+
+.galery-proyects{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-flow: auto;
+    gap: 2rem;
+}
+
+.galery-proyects > img {
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.contact {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
+}
+
+.contact-card {
+    padding: 1rem;
+    text-align: center;
+}
+
+.contact-img {
+    background-color: #f9f5f2;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    padding: 1.5rem;
+    color: #9785f1;
+    text-align: center;
+    background-color: #f9f6ff;
+}
+
+footer {
+    display: block;
+}
+
+
+
+
+
+
+@media screen and ( min-width:760px){
+    label{
+        display: none;
+}
+input#menu-hamburguesa ~ ul{
+    position: static;
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    justify-content: flex-end;
+}
+}
