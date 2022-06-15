@@ -98,28 +98,29 @@ input#menu-hamburguesa:checked ~ ul{
 }
 
 .principal-image>img{
-    width: 300px;
-    margin-left: 100px;
-    }
+    width: 380px;
+    margin-left: 150px;
+}
 
 
 .social-network{
     position: relative;
     display: flex;
-    top: 165px;
-    right: 165px;
+    top: 225px;
+    right: 235px;
     gap: 1rem;
-
 }
 
+
 .social-icon{
-    width: 30px;
-    height: 30px;
+    width: 38px;
+    height: 38px;
     background: var(--blue-primary);
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
+    border: 1px solid white;
 }
 
 .boton-contact{
@@ -131,15 +132,17 @@ input#menu-hamburguesa:checked ~ ul{
     display: inline-block;
     margin: auto;
     border: none;
+    margin-left: 27%;
+    margin-top:2.1%
 }
 
 .boton-contact>img{
-    width: 15px;
+    width: 30px;
 }
 
 .boton-contact>small{
     margin-left: 20px;
-    font-size: 15px;
+    font-size: 18px;
     color: var(--principal-color);
 }
 
@@ -322,4 +325,11 @@ input#menu-hamburguesa ~ ul{
     height: auto;
     justify-content: flex-end;
 }
+}
+
+
+@media screen and ( min-width:860px) {
+.principal-image{
+    grid-row: 1/3;
+}    
 }
