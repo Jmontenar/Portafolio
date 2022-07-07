@@ -24,81 +24,78 @@ header{
 body{
     font-family: 'Montserrat', sans-serif;
 }
-
-input#menu-hamburguesa{
-    visibility: hidden;
+.checkbtn{
+    display:block;
 }
-
-nav{
+.logo-nombre{
     display: flex;
-    justify-content: space-between;
+    flex-wrap: nowrap;
     align-items: center;
-    padding: 0.5rem 1.25rem;
-    height: 60px;
+    position: fixed;
+}   
+.logo{
+    border-style: double;
+    font-size: 3rem;      
 }
-
-nav > div > img {
-    width: 45px;
+.nombre{
+    padding: 1.5rem;
+    font-size: 1.5rem;   
 }
-
-input[type="checkbox" i]{
-    background-color: initial;
-    cursor: default;
-    appearance: auto;
-    border: initial
+.menu-icon{
+    display: block;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
 }
-
-input#menu-hamburguesa ~ ul{
-    background-color: var(--principal-color);
-    list-style:none;
-    position:absolute;
+.nav-menu ul{
+    display: block;
+    position:fixed;
+    top: 70px;
+    left: -100%;
+    background: var(--white-gray);
     width: 100%;
-    left: 0;
-    height: calc(100vh - 60px);
-    top: 60px;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-    padding: 2rem 1rem;
-    display: none;
+    height: 100vh;
+    right: 0;
+    overflow-y: auto;
 }
-
-ul{
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    padding-inline-start: 40px;
-}
-
-input#menu-hamburguesa:checked ~ ul{
+.nav-menu ul li{
+    padding: 2rem;
     display: flex;
+    justify-content: center;
+    margin: 0;
+}
+.nav-menu ul li a{
+    text-decoration: none;
+    color: var(--black-primary)
 }
 
-.presentation{
-    min-width: 100%;
-    padding: 2.5rem;
-    grid-column: 1/1;
-    grid-row: 1;   
+.nav-menu ul li:last-child{
+    background: none;
+    padding: 1rem;
 }
-
+#check:checked ~ ul{
+    left: 0;
+    transition: all .25s;
+}
 .presentation>h1{
     font-size: 2.5rem;
-    font-style: sem;
+    font-style:normal;
 }
+
 .presentation>p{
     font-size: 18px;
 }
 
 .principal-image{
-    grid-row: 2/3;
     display: flex;
-    justify-content: center;
     align-items: center;
 }
 
 .principal-image>img{
     width: 380px;
+    display:flex;
+    justify-content:space-around;
     margin-left: 150px;
 }
 
@@ -107,7 +104,7 @@ input#menu-hamburguesa:checked ~ ul{
     position: relative;
     display: flex;
     top: 225px;
-    right: 235px;
+    right: 275px;
     gap: 1rem;
 }
 
@@ -124,16 +121,16 @@ input#menu-hamburguesa:checked ~ ul{
 }
 
 .boton-contact{
-    grid-row: 3/4;
     width: 290px;
     height: 45px;
     background-color: var(--blue-secundary);
     text-align: center;
-    display: inline-block;
+    display: flex;
     margin: auto;
     border: none;
-    margin-left: 27%;
-    margin-top:2.1%
+    margin-left: auto
+    margin-top: 0px;
+    border-radius: 12px;
 }
 
 .boton-contact>img{
@@ -307,29 +304,34 @@ footer {
 footer {
     display: block;
 }
-
-
-
-
-
-
-@media screen and ( min-width:760px){
-    label{
+@media screen and (min-width: 992px) {
+    .nav-menu ul{
+        position: static;
+        background-color: transparent;
+        display: flex;
+        flex-direction: row;
+        height: auto;
+        justify-content: flex-end
+    }
+    .nav-menu ul li a:hover{
+        background-color: var(--blue-primary);
+        transition: 0.9s;
+        border-radius: 8px;
+    }
+    .nav-menu ul li a{
+        text-decoration: none;
+        color: var(--black-primary)
+    }
+    .menu-icon{
         display: none;
-}
-input#menu-hamburguesa ~ ul{
-    position: static;
-    background-color: transparent;
-    display: flex;
-    flex-direction: row;
-    height: auto;
-    justify-content: flex-end;
-}
+    }
+    .image-section {
+        display: flex;
+        justify-content: space-around;
+    }
+    
 }
 
 
-@media screen and ( min-width:860px) {
-.principal-image{
-    grid-row: 1/3;
-}    
-}
+
+
