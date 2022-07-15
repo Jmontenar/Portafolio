@@ -33,6 +33,15 @@ body{
     background-attachment: fixed;
     background-size: cover;    
 }
+.section-about{
+    margin: 20px;
+}
+.skills-contenedor{
+    margin: 20px;
+}
+.section-experience{
+    margin: 20px;
+}
 .hero {
     width: 100%;
     height: 100vh;
@@ -109,7 +118,6 @@ body{
     width: 30px; 
 }  
 .btn-abrir{
-    border-radius: 40px;
     display: none;
 }
 .logo-nombre:hover{
@@ -233,12 +241,23 @@ h6 {
 small {
     font-size: smaller;
 }
-.galery-proyects{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-auto-flow: auto;
-    gap: 2rem;
+h2{
+    text-transform: uppercase;
+    font-weight: bold;
 }
+
+.section-proyects{
+    margin: 20px;
+}
+.galery-proyects{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: space-between;
+    max-width: 100%;
+    overflow-x: scroll;
+}
+
 .galery-proyects > img {
     max-width: 100%;
     object-fit: cover;
@@ -246,7 +265,7 @@ small {
 .seccion {
     width: 100%;
     height: 100vh;
-    padding-top: 100px;
+    padding-top: 20px;
   }
 .seccion__contenedor {
   max-width: 992px;
@@ -296,14 +315,11 @@ small {
     background-color: var(--blue-secundary);
   }
 footer {
-    padding: 1.5rem;
-    color: #9785f1;
+    font-weight: bolder;
     text-align: center;
-    background-color: #f9f6ff;
-}
-footer {
     display: block;
 }
+
 
 @media (max-width: 768px){
     .hero__nav-inner {
@@ -322,7 +338,7 @@ footer {
         transition: .5s ease-in-out;
     }
     .btn-abrir{
-        border-radius: 40px;
+        background-color: var(--blue-primary);
         display: inline-block;
     }
     .hero__nav-inner.active {
@@ -346,10 +362,10 @@ footer {
     .nombre_{
         margin-top: 28vh;
         font-size: 1.9rem;
-        text-decoration:double;
     }
     .introduccion{
-        font-size: 1.3rem ;
+        font-size: 1.3rem;
+        text-decoration: underline;
     }
     .principal-image1{
         margin-top: 20vh;
@@ -361,13 +377,15 @@ footer {
         flex-direction: column;
         align-items: center;
     }
-    
     .social-network{
         display: flex;
         gap: 1.8rem; 
         margin-top: 20px;  
         justify-content: flex-end;
+        max-height: 40vh;
+        -webkit-box-reflect: below -80px linear-gra
     }
+    
 }        
 
 
